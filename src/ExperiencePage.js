@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Experiences from './Experiences';
 import Navigation from './Navigation';
 import BottomNav from './BottomNav';
-import { Card, Button, CardTitle, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Card, Button, CardText, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter, CardBlock, CardTitle } from 'reactstrap';
 import style from './ExperiencePage.css';
 
 class ExperiencePage extends Component {
@@ -21,7 +21,6 @@ class ExperiencePage extends Component {
    });
  }
 
-
   cardStyle(color, border) {
     return (
       {
@@ -32,13 +31,13 @@ class ExperiencePage extends Component {
   }
 
   render() {
+
+
     return (
       <div>
 
         <Navigation />
-
         <div className="spacer"></div>
-
         <Container className="text-center">
           <h1>Activity Builder</h1>
           <p>Start by choosing the experience you'd like to have. We'll suggest activities for you to achieve your goal.</p>
@@ -46,7 +45,6 @@ class ExperiencePage extends Component {
 
         <Container>
           <Row>
-
           <Experiences
             header="Bold"
             style={this.cardStyle('#F95272', '#F95272')}
@@ -55,22 +53,34 @@ class ExperiencePage extends Component {
           <Experiences
             onclick={this.toggle}
             header="Relaxed"
-            style={this.cardStyle('#8FDAFD', '#8FDAFD')}
+            style={this.cardStyle('#30CDCA', '#30CDCA')}
           />
 
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
-            <ModalHeader toggle={this.toggle}>Relaxed</ModalHeader>
+          <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
+
             <ModalBody>
-            Take time out for yourself to relax
+              <Card
+                onClick={this.props.onclick}
+                block inverse style={this.props.style}
+                className="circle-modal"
+              >
+                <CardBlock>
+                  <CardTitle className="blackFontTitle">Be Relaxed</CardTitle>
+                  <CardText className="blackFontText">Take time out for yourself to relax</CardText>
+                </CardBlock>
+              </Card>
             </ModalBody>
-            <ModalFooter>
+
+            <ModalFooter className="modalButton">
               <Button
-                className="rounded-button button-blue"
+                className="rounded-button button-blue "
+                size="lg" block
                 color="primary"
                 onClick={this.toggle}>Start To Build
               </Button>{' '}
             </ModalFooter>
-          </Modal>
+
+            </Modal>
 
           </Row>
 
@@ -84,7 +94,7 @@ class ExperiencePage extends Component {
 
           <Experiences
             header="Inquisitive"
-            style={this.cardStyle('#2ABBB3', '#2ABBB3')}
+            style={this.cardStyle('#79A4FB', '#79A4FB')}
           />
           </Row>
 
@@ -92,13 +102,27 @@ class ExperiencePage extends Component {
 
           <Row>
           <Experiences
-            header="Positive"
+            header="Adventurous"
             style={this.cardStyle('#F1E484', '#F1E484')}
           />
 
           <Experiences
-            header="Inquisitive"
-            style={this.cardStyle('#2ABBB3', '#2ABBB3')}
+            header="Motivated"
+            style={this.cardStyle('#F95272', '#F95272')}
+          />
+          </Row>
+
+          <div className="spacer"></div>
+
+          <Row>
+          <Experiences
+            header="Yourself"
+            style={this.cardStyle('#F1E484', '#F1E484')}
+          />
+
+          <Experiences
+            header="Kind"
+            style={this.cardStyle('#F95272', '#F95272')}
           />
           </Row>
 
