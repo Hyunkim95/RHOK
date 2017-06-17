@@ -6,8 +6,6 @@ class Carousel extends Component {
       <div>
         <img src="" alt=""/>
         <h3>{this.props.subtitle}</h3>
-        <img src="" alt=""/>
-        <p>{this.props.text}</p>
       </div>
     );
   }
