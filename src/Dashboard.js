@@ -13,11 +13,13 @@ class Dashboard extends Component {
     super()
     this.state = {
       points: 0,
+      selected: false,
       modal: false,
       doneColor: false,
     }
     this.cardStyle.bind(this);
     this.fontStyle.bind(this);
+    this.emoticonStyle.bind(this);
     this.toggle = this.toggle.bind(this);
     this.addPoints = this.addPoints.bind(this);
   }
@@ -31,25 +33,36 @@ class Dashboard extends Component {
   cardStyle(color, border) {
     return (
       {
-      'backgroundColor': color,
+      'backgroundColor': this.state.selected == 1 ? color : '',
       'borderColor': border,
       }
     )
   }
 
-  fontStyle(textColor) {
-    return (
+  emoticonStyle(){
+    return(
       {
-      'color': textColor,
+        'display': this.state.selected == 1 ? "block" : "none",
+        marginTop: "-15px",
+        fontSize: "45px"
       }
     )
   }
 
-  addPoints() {
+  fontStyle(otherColor, textColor) {
+    return (
+      {
+      'color': !this.state.selected == 1 ? otherColor : textColor,
+      }
+    )
+  }
+
+  addPoints(number) {
     var points = this.state.points + 10
 
     this.setState({
       modal: !this.state.modal,
+      selected: number,
       points: points,
       doneColor: true,
     })
@@ -87,7 +100,7 @@ class Dashboard extends Component {
             classname="circle-dashboard paintingCircle"
             header="Painting"
             style={this.cardStyle('', '#79A4FB')}
-            fontStyle={this.fontStyle('#79A4FB')}
+            fontStyle={this.fontStyle('#79A4FB', '#79A4FB')}
           />
 
           <DashboardCircle
@@ -95,8 +108,10 @@ class Dashboard extends Component {
             onclick={this.toggle}
             classname="circle-dashboard yogaCircle"
             header="Yoga"
-            style={this.cardStyle('', '#F3A24A')}
-            fontStyle={this.fontStyle('#F3A24A')}
+            emoticon = "&#128513;"
+            emoticonStyle = {this.emoticonStyle()}
+            style={this.cardStyle('#F3A24A', '#F3A24A')}
+            fontStyle={this.fontStyle('#F3A24A', 'white')}
           />
 
           <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
@@ -119,7 +134,7 @@ class Dashboard extends Component {
                 className="rounded-button button-orange "
                 size="lg" block
                 color="primary"
-                onClick={(i) => this.addPoints()}>Complete +10 Pts <FaPoints />
+                onClick={() => this.addPoints(1)}>Complete +10 Pts <FaPoints />
               </Button>{' '}
             </ModalFooter>
 
@@ -134,14 +149,14 @@ class Dashboard extends Component {
             classname="circle-dashboard cookingCircle"
             header="Cooking"
             style={this.cardStyle('', '#50A344')}
-            fontStyle={this.fontStyle('#50A344')}
+            fontStyle={this.fontStyle('#50A344','#50A344')}
           />
 
           <DashboardCircle
             classname="circle-dashboard moreCircle"
             header="Add More +"
             style={this.cardStyle('', '#8C8C8C')}
-            fontStyle={this.fontStyle('#8C8C8C')}
+            fontStyle={this.fontStyle('#8C8C8C','#8C8C8C')}
           />
         </Row>
       </Container>
