@@ -37,7 +37,9 @@ class ExperiencePage extends Component {
       <div>
 
         <Navigation />
+
         <div className="spacer"></div>
+
         <Container className="text-center">
           <h1>Activity Builder</h1>
           <p>Start by choosing the experience you'd like to have. We'll suggest activities for you to achieve your goal.</p>
@@ -56,8 +58,7 @@ class ExperiencePage extends Component {
             style={this.cardStyle('#30CDCA', '#30CDCA')}
           />
 
-          <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
-
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed transparent">
             <ModalBody>
               <Card
                 onClick={this.props.onclick}
@@ -79,7 +80,6 @@ class ExperiencePage extends Component {
                 onClick={this.toggle}>Start To Build
               </Button>{' '}
             </ModalFooter>
-
             </Modal>
 
           </Row>
