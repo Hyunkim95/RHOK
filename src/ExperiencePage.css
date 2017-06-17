@@ -1,0 +1,12 @@
+.circle{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacer{
+  margin-bottom: 40px;
+}
