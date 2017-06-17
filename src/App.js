@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Carousel from './Carousel'
+import Homepage from './Homepage';
+import SignUp from './SignUp';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -12,26 +19,20 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Carousel
-          subtitle=""
-          image=""
-          text="Focus on building the best you"
-        />
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/signuppage">Sign Up</Link></li>
+          </ul>
 
-        <Carousel
-          subtitle="What do you want to be?"
-          image=""
-          text="Start by identifying your personal 'build' activity"
-        />
-
-        <Carousel
-          subtitle=""
-          image=""
-          text="Invite a buddy to do it with you or join a community to keep it fun
-          and motivating."
-        />
-      </div>
+          <hr/>
+          <Switch>
+            <Route exact path="/" component={Homepage}/>
+            <Route path="/signuppage" component={SignUp}/>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
