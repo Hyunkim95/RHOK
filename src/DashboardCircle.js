@@ -16,6 +16,7 @@ class DashboardCircle extends Component {
            >
                {this.props.header}
            </CardTitle>
+           <p style={this.props.emoticonStyle}>{this.props.emoticon}</p>
         </Card>
        </Col>
     );
