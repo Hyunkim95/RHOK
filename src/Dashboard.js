@@ -3,10 +3,10 @@ import Navigation from './Navigation';
 import BottomNav from './BottomNav';
 import DashboardCircle from './DashboardCircle';
 import Banner from './Banner';
-import FaPoints from 'react-icons/lib/fa/star';
-import FaBoost from 'react-icons/lib/fa/rocket';
 import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import FaPoints from 'react-icons/lib/fa/star';
+import FaBoost from 'react-icons/lib/fa/rocket';
 import { Button, Card, CardText, CardTitle, CardBlock, CardImg, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import style from './Dashboard.css';
 
@@ -17,6 +17,19 @@ class Dashboard extends Component {
       points: 0,
       selected: false,
       modal: false,
+      marks: {
+        0: '0',
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+        6: '6',
+        7: '7',
+        8: '8',
+        9: '9',
+        10: '10'
+      },
       doneColor: false,
     }
     this.cardStyle.bind(this);
@@ -126,10 +139,15 @@ class Dashboard extends Component {
                 <CardBlock>
                   <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
                 <CardTitle className="orangeFontTitle">Yoga</CardTitle>
+                <Slider
+                  dots
+                  marks = {this.state.marks}
+                  step = {1}
+                  defaultValue = {8}
+                  min={0}
+                  max={10}
+                />
                 <CardText className="blackTextFont">How do you feel?</CardText>
-                <div style={style}>
-                  <Range dots step={1} defaultValue={[0, 10]} onAfterChange={log} />
-                </div>
                 </CardBlock>
               </Card>
             </ModalBody>
