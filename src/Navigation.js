@@ -9,7 +9,7 @@ class Navigation extends Component {
     return (
       <div className="navbarComponent">
         <div className="arrow-left"><FaArrowLeft /></div>
-        <div><img className="brandImage" src={require("./images/title.png")} alt=""/></div>
+        <div><img className="brandImage" src={require("./images/iameeLogo_gradient.png")} alt=""/></div>
         <div><img className="profileImage" src="" alt=""/></div>
       </div>
     );
