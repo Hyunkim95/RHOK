@@ -21,7 +21,7 @@
   align-items: center !important;
 }
 
-.modal-content {
+.transparent .modal-content{
   background-color: transparent !important;
   border: none !important;
 }

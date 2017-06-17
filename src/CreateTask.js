@@ -63,7 +63,7 @@ class ExperiencePage extends Component {
           <div className="spacer-small"></div>
 
           <div className="intro-text text-center">
-            <p>Introl text to go here telling users to select their activity</p>
+            <p>Intro text to go here telling users to select their activity</p>
           </div>
 
           <div className="pills">
