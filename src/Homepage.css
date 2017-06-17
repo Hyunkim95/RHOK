@@ -33,6 +33,13 @@
   color: #fff;
 }
 
+.fixed-button{
+  position: fixed;
+  bottom: 12%;
+  left: 50% ;
+  margin-left: -62px;
+}
+
 .slick-track{
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
