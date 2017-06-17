@@ -8,8 +8,9 @@ class Navigation extends Component {
   render() {
     return (
       <div className="navbarComponent">
-        <div className="brand"><FaArrowLeft /></div>
-
+        <div className="arrow-left"><FaArrowLeft /></div>
+        <div><img className="brandImage" src={require("./images/title.png")} alt=""/></div>
+        <div><img className="profileImage" src="" alt=""/></div>
       </div>
     );
   }
