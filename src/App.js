@@ -3,6 +3,7 @@ import Homepage from './Homepage';
 import SignUp from './SignUp';
 import CreateTask from './CreateTask'
 import ExperiencePage from './ExperiencePage';
+import Dashboard from './Dashboard';
 import {
   BrowserRouter as Router,
   Route,
@@ -27,6 +28,7 @@ class App extends Component {
             <Route path="/signuppage" component={SignUp}/>
             <Route path="/experiences" component={ExperiencePage}/>
             <Route path="/createtask" component={CreateTask}/>
+            <Route path="/dashboard" component={Dashboard}/>
           </Switch>
         </div>
       </Router>

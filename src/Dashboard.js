@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import BottomNav from './BottomNav';
-import DashboardBanner from './DashboardBanner'
+import Banner from './Banner'
 
 class Dashboard extends Component {
   constructor() {
@@ -16,9 +16,18 @@ class Dashboard extends Component {
       <div>
         <Navigation />
 
-        <DashboardBanner
-          title="Relaxed"
+        <Banner
         />
+
+        <div className="spacer-small"></div>
+
+        <div className="text-center">
+          <p><strong>10 pts</strong></p>
+        </div>
+
+        <div className="text-center">
+          <p>Completed Activities</p>
+        </div>
 
         <BottomNav />
       </div>
