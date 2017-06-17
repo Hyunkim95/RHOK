@@ -1,22 +1,25 @@
 
 import React, { Component } from 'react';
-import { Navbar, Nav, Navitem, MenuItem } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import './App.css';
 
 class Navigation extends Component {
   render() {
     return (
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem eventKey={1} href="#">Link</NavItem>
-            <NavItem eventKey={2} href="#">Link</NavItem>
-          </Nav>
+
+        <div>
+        <Navbar color="faded" light>
+            <NavbarBrand href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></NavbarBrand>
+            <Nav navbar>
+              <NavItem>
+                <NavLink href="/components/">Components</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+              </NavItem>
+            </Nav>
         </Navbar>
+      </div>
     );
   }
 }

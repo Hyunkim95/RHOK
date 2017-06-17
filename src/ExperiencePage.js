@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Experiences from './Experiences';
+import Navigation from './Navigation'
 import { Card, Button, CardTitle, Row, Col, Container } from 'reactstrap';
 
 
@@ -24,6 +25,8 @@ class ExperiencePage extends Component {
   render() {
     return (
       <div>
+
+        <Navigation />
 
         <Container className="text-center">
           <h1>How do you want to feel?</h1>
