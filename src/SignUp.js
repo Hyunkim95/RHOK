@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './SignUp.css'
+import style from './SignUp.css';
 import { Container, Button, Form, FormGroup, Input, FormText} from 'reactstrap';
 
 
@@ -7,7 +7,7 @@ class SignUp extends Component {
   render() {
     return (
         <Container className="text-center">
-          <img src="" alt=""/>
+          <img className="logo" src={require('./logo.png')} alt=""/>
           <Button
             className="rounded-button"
             outline
@@ -30,6 +30,7 @@ class SignUp extends Component {
             className="rounded-button"
             color="primary"
             size="lg"
+            block
             >
             Sign Up
           </Button>
