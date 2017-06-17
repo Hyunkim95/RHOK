@@ -1,4 +1,4 @@
-.circle{
+.circle {
   width: 150px;
   height: 150px;
   border-radius: 100px !important;
@@ -7,11 +7,30 @@
   align-items: center;
 }
 
-.spacer{
+.circle-modal {
+  width: 300px;
+  height: 300px;
+  border-radius: 200px !important;
+  margin: auto;
+  background-color: #30CDCA !important;
+
+}
+
+.blackFontTitle {
+  color: white !important;
+  margin-top: 30px;
+}
+
+.blackFontText {
+  color: white !important;
+  margin-top: 45px;
+}
+
+.spacer {
   margin-bottom: 40px;
 }
 
-.spacer-small{
+.spacer-small {
   margin-bottom: 20px;
 }
 
