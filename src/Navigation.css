@@ -1,0 +1,17 @@
+.navbarImage {
+   background: url("./images/BG_top_nav.jpg") no-repeat top center;
+   background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.spacer{
+  margin-bottom: 40px;
+}
+
+.navbarComponent {
+  height: 80px;
+  width: 100%;
+}
