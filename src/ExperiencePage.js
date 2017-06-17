@@ -63,15 +63,16 @@ class ExperiencePage extends Component {
                 className="circle-modal"
               >
                 <CardBlock>
-                  <CardTitle className="blackFontTitle">Relaxed</CardTitle>
+                  <CardTitle className="blackFontTitle">Be Relaxed</CardTitle>
                   <CardText className="blackFontText">Take time out for yourself to relax</CardText>
                 </CardBlock>
               </Card>
             </ModalBody>
 
-            <ModalFooter>
+            <ModalFooter className="modalButton">
               <Button
-                className="rounded-button button-blue"
+                className="rounded-button button-blue "
+                size="lg" block
                 color="primary"
                 onClick={this.toggle}>Start To Build
               </Button>{' '}
@@ -108,6 +109,8 @@ class ExperiencePage extends Component {
             style={this.cardStyle('#F95272', '#F95272')}
           />
           </Row>
+
+          <div className="spacer"></div>
 
           <Row>
           <Experiences
