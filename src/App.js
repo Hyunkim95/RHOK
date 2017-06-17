@@ -21,12 +21,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/signuppage">Sign Up</Link></li>
-          </ul>
-
-          <hr/>
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route path="/signuppage" component={SignUp}/>

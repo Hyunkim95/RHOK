@@ -16,20 +16,24 @@ class SignUp extends Component {
             >
             SIGN UP WITH FACEBOOK
           </Button>
-          <h2>OR</h2>
+          <div className="spacer"></div>
+          <h4>OR</h4>
+          <div className="spacer"></div>
           <FormGroup>
-            <Input type="username" name="username" placeholder="USER NAME" />
+            <Input className= "bottom-border-input" type="username" name="username" placeholder="USER NAME" />
           </FormGroup>
           <FormGroup>
-            <Input type="password" name="password" placeholder="PASSWORD" />
+            <Input className= "bottom-border-input" type="password" name="password" placeholder="PASSWORD" />
           </FormGroup>
+          <div className="spacer"></div>
           <Button
             className="rounded-button"
             color="primary"
-            size="lg" block
+            size="lg"
             >
             Sign Up
           </Button>
+          <div className="spacer"></div>
           <p>Already have an account? Log In</p>
         </Container>
     );
