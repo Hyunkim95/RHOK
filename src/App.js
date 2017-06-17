@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Homepage from './Homepage';
 import SignUp from './SignUp';
+import ExperiencePage from './ExperiencePage';
 import {
   BrowserRouter as Router,
   Route,
@@ -24,6 +25,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Homepage}/>
             <Route path="/signuppage" component={SignUp}/>
+            <Route path="/experiences" component={ExperiencePage}/>
           </Switch>
         </div>
       </Router>

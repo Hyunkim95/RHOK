@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { Card, Button, CardText } from 'reactstrap';
+import { Card, CardTitle, Col } from 'reactstrap';
+import style from './ExperiencePage.css'
 
 class Experiences extends Component {
   render() {
     return (
-      <div>
-        <Card block inverse style={this.props.style}}>
+      <Col sm="6">
+        <Card
+          block inverse style={this.props.style}
+          className="circle"
+        >
            <CardTitle>{this.props.header}</CardTitle>
-         </Card>
-      </div>
+        </Card>
+       </Col>
     );
   }
 }
