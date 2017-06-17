@@ -14,10 +14,30 @@ class ExperiencePage extends Component {
 
     this.state= {
       clicked: false,
+      newActivity: '',
       activities: ['YOGA', 'MEDITATION', 'READING', 'WRITING', 'ART', 'DANCING']
     }
 
     this.clickedTrue = this.clickedTrue.bind(this)
+    this.addNewActivity = this.addNewActivity.bind(this)
+  }
+
+  changeActivity(event) {
+    this.setState({
+      newActivity: event.target.value
+    })
+    console.log(this.state.newActivity)
+  }
+
+  addNewActivity(){
+    var array = this.state.activities;
+    var new_activity = this.state.newActivity;
+    array.push(new_activity)
+    console.log(array)
+
+    this.setState({
+      activities: array
+    })
   }
 
   clickedTrue(i){
@@ -35,7 +55,7 @@ class ExperiencePage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="let-there-be-overflow">
         <Navigation />
         <Banner />
         <Container>
@@ -58,8 +78,9 @@ class ExperiencePage extends Component {
           <div className="spacer-small"></div>
 
           <FormGroup className="no-wrap">
-            <Input className="activity-input" type="activity" name="activity" id="activity" placeholder="Add your own activity" />
+            <Input className="activity-input" onChange={(e)=>this.changeActivity(e)} value={this.state.newActivity} type="activity" name="activity" id="activity" placeholder="Add your own activity" />
             <Button
+              onClick={this.addNewActivity}
               color="primary"
               className="circle-button"
               >
@@ -95,6 +116,8 @@ class ExperiencePage extends Component {
           >
           Create
         </Button>
+
+        <div className="spacer"></div>
 
         </Container>
 
