@@ -1,3 +1,13 @@
 .rounded-button{
   border-radius: 50px !important;
 }
+
+.bottom-border-input{
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.spacer{
+  margin-bottom: 40px;
+}
