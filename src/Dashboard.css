@@ -19,7 +19,7 @@
 }
 
 .boostLogo {
-margin: 0px 0px 0px 190px;
+  margin: 0px 0px 0px 190px;
 }
 
 .button-orange {
@@ -29,4 +29,14 @@ margin: 0px 0px 0px 190px;
 .modal-content {
   background-color: #fff !important;
   border: none !important;
+}
+
+.orangeFontTitle {
+  color: #FF9400 !important;
+  margin-top: 30px;
+}
+
+.blackTextFont {
+  color: black !important;
+  margin-top: 45px;
 }
