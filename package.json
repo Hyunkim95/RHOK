@@ -10,6 +10,7 @@
     "react-dom": "^15.6.1",
     "react-icons": "^2.2.5",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "react-slick": "^0.14.11",
     "reactstrap": "^4.6.2",
     "slick-carousel": "^1.6.0"

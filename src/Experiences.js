@@ -7,6 +7,7 @@ class Experiences extends Component {
     return (
       <Col sm="6">
         <Card
+          onClick={this.props.onclick}
           block inverse style={this.props.style}
           className="circle"
         >
