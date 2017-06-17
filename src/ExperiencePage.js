@@ -58,6 +58,7 @@ class ExperiencePage extends Component {
             style={this.cardStyle('#30CDCA', '#30CDCA')}
           />
 
+
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed transparent">
             <ModalBody>
               <Card
