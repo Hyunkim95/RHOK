@@ -7,7 +7,7 @@ class SignUp extends Component {
   render() {
     return (
         <Container className="text-center">
-          <img className="logo" src={require('./logo.png')} alt=""/>
+          <img className="logo" src={require('./images/logo.png')} alt=""/>
           <Button
             className="rounded-button"
             outline
@@ -34,8 +34,9 @@ class SignUp extends Component {
             >
             Sign Up
           </Button>
-          <div className="spacer"></div>
+          <br/>
           <p>Already have an account? Log In</p>
+          <div className="spacer"></div>
         </Container>
     );
   }
