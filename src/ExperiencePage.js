@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Experiences from './Experiences';
-import Navigation from './Navigation'
+import Navigation from './Navigation';
+import BottomNav from './BottomNav';
 import { Card, Button, CardTitle, Row, Col, Container } from 'reactstrap';
-import style from './ExperiencePage.css'
+import style from './ExperiencePage.css';
 
 class ExperiencePage extends Component {
   constructor() {
@@ -62,7 +63,26 @@ class ExperiencePage extends Component {
             style={this.cardStyle('#2ABBB3', '#2ABBB3')}
           />
           </Row>
+
+          <div className="spacer"></div>
+
+          <Row>
+          <Experiences
+            header="Positive"
+            style={this.cardStyle('#F1E484', '#F1E484')}
+          />
+
+          <Experiences
+            header="Inquisitive"
+            style={this.cardStyle('#2ABBB3', '#2ABBB3')}
+          />
+          </Row>
+
+          <div className="spacer"></div>
         </Container>
+
+        <BottomNav />
+
       </div>
     );
   }
