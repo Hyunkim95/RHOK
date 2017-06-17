@@ -2,17 +2,25 @@ import React, { Component } from 'react';
 import Experiences from './Experiences';
 import Navigation from './Navigation';
 import BottomNav from './BottomNav';
-import { Card, Button, CardTitle, Row, Col, Container } from 'reactstrap';
+import { Card, Button, CardTitle, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import style from './ExperiencePage.css';
 
 class ExperiencePage extends Component {
   constructor() {
     super()
     this.state = {
-
-    }
-    this.cardStyle.bind(this)
+      modal: false
+    };
+    this.cardStyle.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
+
+  toggle() {
+   this.setState({
+     modal: !this.state.modal
+   });
+ }
+
 
   cardStyle(color, border) {
     return (
@@ -45,9 +53,25 @@ class ExperiencePage extends Component {
           />
 
           <Experiences
+            onclick={this.toggle}
             header="Relaxed"
             style={this.cardStyle('#8FDAFD', '#8FDAFD')}
           />
+
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
+            <ModalHeader toggle={this.toggle}>Relaxed</ModalHeader>
+            <ModalBody>
+            Take time out for yourself to relax
+            </ModalBody>
+            <ModalFooter>
+              <Button
+                className="rounded-button button-blue"
+                color="primary"
+                onClick={this.toggle}>Start To Build
+              </Button>{' '}
+            </ModalFooter>
+          </Modal>
+
           </Row>
 
           <div className="spacer"></div>
