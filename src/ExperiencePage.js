@@ -57,7 +57,6 @@ class ExperiencePage extends Component {
           />
 
           <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed">
-
             <ModalBody>
               <Card
                 onClick={this.props.onclick}
