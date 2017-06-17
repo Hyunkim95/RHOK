@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Experiences from './Experiences';
 import Navigation from './Navigation';
 import BottomNav from './BottomNav';
-import Banner from './Banner'
+import FaPlus from 'react-icons/lib/fa/plus';
+import FaArrowDown from 'react-icons/lib/fa/arrow-down';
+import Banner from './Banner';
 import { Badge, Card, FormGroup, Label, Input, FormText, Button, CardTitle, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import style from './CreateTask.css';
 
@@ -53,22 +55,46 @@ class ExperiencePage extends Component {
 
           </div>
 
+          <div className="spacer-small"></div>
+
+          <FormGroup className="no-wrap">
+            <Input className="activity-input" type="activity" name="activity" id="activity" placeholder="Add your own activity" />
+            <Button
+              color="primary"
+              className="circle-button"
+              >
+                <FaPlus />
+              </Button>
+          </FormGroup>
+
           <div className="spacer"></div>
 
-          <FormGroup>
-            <Input type="activity" name="activity" id="activity" placeholder="Add your own activity" />
-          </FormGroup>
+        <div className="text-center">
+          <p>Set reminder frequency</p>
+        </div>
 
-          <FormGroup>
-            <Label for="exampleSelect">Set reminder frequency</Label>
-            <Input type="select" name="select" id="exampleSelect">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </Input>
-          </FormGroup>
+        <div className="sorting">
+          <div className="sort right"><label>
+              <select>
+              <option value="daily">DAILY</option>
+              <option value="weekly">WEEKLY</option>
+              <option value="monthly">MONTHLY</option>
+              </select>
+              <span className="pointer"><FaArrowDown/></span>
+              </label>
+            </div>
+        </div>
+
+        <div className="spacer"></div>
+
+        <Button
+          className="rounded-button"
+          color="primary"
+          size="lg"
+          block
+          >
+          Sign Up
+        </Button>
 
         </Container>
 
