@@ -8,11 +8,16 @@
   border-right: none !important;
 }
 
+.hide-overflow{
+  overflow: hidden;
+}
+
 .spacer{
   margin-bottom: 40px;
 }
 
 .logo{
   width: 80%;
+  margin-top: -25px;
   height: auto;
 }

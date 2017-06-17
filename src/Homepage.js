@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import Carousel from './Carousel';
-import { Container } from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 import './App.css';
 import style from './Homepage.css'
 import Slider from 'react-slick';
@@ -27,7 +27,8 @@ class Homepage extends Component {
     return (
       <div className="homepage-background">
         <div className="homepage-content">
-          <img className="logo-title" src={require('./images/title.png')} alt=""/>
+          <img className="logo-title" src={require('./images/iameeLogo_gradient.png')} alt=""/>
+          <div className="spacer"></div>
           <Container className="carousel text-center">
             <Slider {...settings}>
               <div>
@@ -48,6 +49,14 @@ class Homepage extends Component {
             </Slider>
           </Container>
         </div>
+
+        <Button
+          color="primary"
+          className = "fixed-button"
+          size="lg"
+          >
+          Continue
+        </Button>
       </div>
     );
   }

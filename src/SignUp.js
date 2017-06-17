@@ -6,7 +6,7 @@ import { Container, Button, Form, FormGroup, Input, FormText} from 'reactstrap';
 class SignUp extends Component {
   render() {
     return (
-        <Container className="text-center">
+        <Container className="text-center hide-overflow">
           <img className="logo" src={require('./images/logo.png')} alt=""/>
           <Button
             className="rounded-button"
