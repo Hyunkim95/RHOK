@@ -1,0 +1,18 @@
+.badge-pill{
+  width: 100px;
+  height: 30px;
+  border: #33C2BC 2px solid;
+  margin: 5px;
+}
+
+.pills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.badge-pill p {
+  margin-top: 5px;
+}

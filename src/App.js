@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Homepage from './Homepage';
 import SignUp from './SignUp';
+import CreateTask from './CreateTask'
 import ExperiencePage from './ExperiencePage';
 import {
   BrowserRouter as Router,
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/" component={Homepage}/>
             <Route path="/signuppage" component={SignUp}/>
             <Route path="/experiences" component={ExperiencePage}/>
+            <Route path="/createtask" component={CreateTask}/>
           </Switch>
         </div>
       </Router>
