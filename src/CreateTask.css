@@ -66,8 +66,8 @@ select{
 .sort span.pointer{
     height:50px;
     width:65px;
-    background-color: #0275D8;
-    border-left:1px solid #ddd;
+    background-color: #6899FC;
+    border-left:1px solid #6899FC;
     position:absolute;
     border-top-right-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;

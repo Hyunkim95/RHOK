@@ -12,7 +12,7 @@ class SignUp extends Component {
           <img className="logo" src={require('./images/logo.png')} alt=""/>
           <Link to='/experiences'>
             <Button
-              className="rounded-button"
+              className="rounded-button facebook-btn"
               outline
               color="primary"
               size="lg" block

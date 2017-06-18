@@ -56,7 +56,7 @@ class ExperiencePage extends Component {
 
   addNewEmail(){
     const URL = 'https://iamee.leaanthony.com/api/invite';
-    axios.get(URL + '?email' + this.state.newEmail)
+    axios.get(URL + '?email=' + this.state.newEmail)
     .then(
       this.setState({
         emailFormholder: "Your invite has been sent!"

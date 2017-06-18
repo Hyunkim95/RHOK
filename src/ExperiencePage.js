@@ -109,12 +109,12 @@ class ExperiencePage extends Component {
           <Row>
           <Experiences
             header="Adventurous"
-            style={this.cardStyle('#F1E484', '#F1E484')}
+            style={this.cardStyle('#32BAF0', '#32BAF0')}
           />
 
           <Experiences
             header="Motivated"
-            style={this.cardStyle('#F95272', '#F95272')}
+            style={this.cardStyle('#F1808B', '#F1808B')}
           />
           </Row>
 
@@ -123,12 +123,12 @@ class ExperiencePage extends Component {
           <Row>
           <Experiences
             header="Yourself"
-            style={this.cardStyle('#F1E484', '#F1E484')}
+            style={this.cardStyle('#FBB751', '#FBB751')}
           />
 
           <Experiences
             header="Kind"
-            style={this.cardStyle('#F95272', '#F95272')}
+            style={this.cardStyle('#6DBF7A', '#6DBF7A')}
           />
           </Row>
 
