@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Experiences from './Experiences';
 import Navigation from './Navigation';
 import BottomNav from './BottomNav';
+import {
+  Link
+} from 'react-router-dom';
 import { Card, Button, CardText, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter, CardBlock, CardTitle } from 'reactstrap';
 import style from './ExperiencePage.css';
 
@@ -74,12 +77,14 @@ class ExperiencePage extends Component {
             </ModalBody>
 
             <ModalFooter className="modalButton">
-              <Button
-                className="rounded-button button-blue "
-                size="lg" block
-                color="primary"
-                onClick={this.toggle}>Start To Build
-              </Button>{' '}
+              <Link to='/createtask'>
+                <Button
+                  className="rounded-button button-blue "
+                  size="lg" block
+                  color="primary"
+                  onClick={this.toggle}>Start To Build
+                </Button>
+              </Link>
             </ModalFooter>
             </Modal>
 

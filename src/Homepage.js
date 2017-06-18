@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import Carousel from './Carousel';
 import { Container, Button } from 'reactstrap';
 import './App.css';
-import style from './Homepage.css'
+import style from './Homepage.css';
 import Slider from 'react-slick';
+import {
+  Link
+} from 'react-router-dom'
 
 
 class Homepage extends Component {
@@ -50,13 +53,15 @@ class Homepage extends Component {
           </Container>
         </div>
 
-        <Button
-          color="primary"
-          className = "fixed-button"
-          size="lg"
-          >
-          Continue
-        </Button>
+        <Link to='/signup'>
+          <Button
+            color="primary"
+            className = "fixed-button"
+            size="lg"
+            >
+            Continue
+          </Button>
+        </Link>
       </div>
     );
   }

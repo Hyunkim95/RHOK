@@ -7,6 +7,9 @@ import FaArrowDown from 'react-icons/lib/fa/arrow-down';
 import Banner from './Banner';
 import { Badge, Card, FormGroup, Label, Input, FormText, Button, CardTitle, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import style from './CreateTask.css';
+import {
+  Link
+} from 'react-router-dom'
 
 class ExperiencePage extends Component {
   constructor() {
@@ -15,10 +18,11 @@ class ExperiencePage extends Component {
     this.state= {
       clicked: false,
       newActivity: '',
-      activities: ['YOGA', 'MEDITATION', 'READING', 'WRITING', 'ART', 'DANCING']
+      activities: ['MEDITATION', 'READING', 'WRITING', 'ART', 'DANCING']
     }
 
     this.clickedTrue = this.clickedTrue.bind(this)
+    this.getStyles = this.getStyles.bind(this)
     this.addNewActivity = this.addNewActivity.bind(this)
   }
 
@@ -68,7 +72,7 @@ class ExperiencePage extends Component {
 
           <div className="pills">
             {this.state.activities.map((activity, i) =>
-              <Badge id={i} onClick = {() => this.clickedTrue(i)} style={this.getStyles(i)} pill>
+              <Badge id={i} onClick = {(i) => this.clickedTrue(i)} style={this.getStyles(i)} pill>
                 <p>{activity}</p>
               </Badge>
             )}
@@ -108,14 +112,16 @@ class ExperiencePage extends Component {
 
         <div className="spacer"></div>
 
-        <Button
-          className="rounded-button"
-          color="primary"
-          size="lg"
-          block
-          >
-          Create
-        </Button>
+        <Link to='/dashboard'>
+          <Button
+            className="rounded-button"
+            color="primary"
+            size="lg"
+            block
+            >
+            Create
+          </Button>
+        </Link>
 
         <div className="spacer"></div>
 
