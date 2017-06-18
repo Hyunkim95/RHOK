@@ -45,17 +45,15 @@
 }
 
 .modal-dialog {
+  position: absolute;
   top: 50%;
   left: 47.5%;
   transform: translate(-50%, -50%) !important;
 }
 
-@media (max-width: 800px) {
-  .modal-dialog {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
+@media (max-width: 767px) {
+  #content .modal.fade.in {
+    top: 5%;
   }
 }
 
