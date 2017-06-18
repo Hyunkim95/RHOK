@@ -31,6 +31,7 @@ class Dashboard extends Component {
         10: '10'
       },
       doneColor: false,
+      dashboardTitle: "Relax - Earn Points",
     }
     this.cardStyle.bind(this);
     this.fontStyle.bind(this);
@@ -80,6 +81,7 @@ class Dashboard extends Component {
       selected: number,
       points: points,
       doneColor: true,
+      dashboardTitle: "Good Stuff! You earned 10 pts!"
     })
   }
 
@@ -106,7 +108,7 @@ class Dashboard extends Component {
         </Col>
 
         <Container className="text-center">
-          <h5>Relax - Earn Points</h5>
+          <h5>{this.state.dashboardTitle}</h5>
         </Container>
 
       <Container>

@@ -5,6 +5,7 @@ import BottomNav from './BottomNav';
 import FaPlus from 'react-icons/lib/fa/plus';
 import FaArrowDown from 'react-icons/lib/fa/arrow-down';
 import Banner from './Banner';
+import axios from 'axios'
 import { Badge, Card, FormGroup, Label, Input, FormText, Button, CardTitle, Row, Col, Container, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import style from './CreateTask.css';
 import {
@@ -18,11 +19,14 @@ class ExperiencePage extends Component {
     this.state= {
       clicked: false,
       newActivity: '',
-      activities: ['MEDITATION', 'READING', 'WRITING', 'ART', 'DANCING']
+      activities: ['MEDITATION', 'READING', 'WRITING', 'ART', 'DANCING'],
+      newEmail: '',
+      emailFormholder: "Invite a friend!",
     }
 
     this.clickedTrue = this.clickedTrue.bind(this)
     this.addNewActivity = this.addNewActivity.bind(this)
+    this.addNewEmail = this.addNewEmail.bind(this)
   }
 
   changeActivity(event) {
@@ -30,6 +34,13 @@ class ExperiencePage extends Component {
       newActivity: event.target.value
     })
     console.log(this.state.newActivity)
+  }
+
+  changeEmail(event) {
+    this.setState({
+      newEmail: event.target.value
+    })
+    console.log(this.state.newEmail)
   }
 
   addNewActivity(){
@@ -42,6 +53,17 @@ class ExperiencePage extends Component {
       activities: array
     })
   }
+
+  addNewEmail(){
+    const URL = 'https://iamee.leaanthony.com/api/invite';
+    axios.get(URL + '?email' + this.state.newEmail)
+    .then(
+      this.setState({
+        emailFormholder: "Your invite has been sent!"
+      })
+    )
+  }
+
 
   clickedTrue(i){
       this.setState({
@@ -123,6 +145,21 @@ class ExperiencePage extends Component {
         </Link>
 
         <div className="spacer"></div>
+
+        <div className="text-center">
+          <p>{this.state.emailFormholder}</p>
+        </div>
+
+        <FormGroup className="no-wrap">
+          <Input className="activity-input" onChange={(e)=>this.changeEmail(e)} value={this.state.newEmail} type="activity" name="activity" id="activity" placeholder="Enter your friend's email address" />
+          <Button
+            onClick={this.addNewEmail}
+            color="primary"
+            className="circle-button"
+            >
+              <FaPlus />
+            </Button>
+        </FormGroup>
 
         </Container>
 
