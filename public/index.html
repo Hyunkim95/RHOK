@@ -9,7 +9,7 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <!--
@@ -28,6 +28,23 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
