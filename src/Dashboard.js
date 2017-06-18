@@ -139,7 +139,9 @@ class Dashboard extends Component {
                 block inverse style={this.props.style}
               >
                 <CardBlock>
+
                   <CardImg top width="100%" src={require("./images/yoga.png")} alt="Card image cap" />
+
                 <CardTitle className="orangeFontTitle">Yoga</CardTitle>
                 <Slider
                   dots

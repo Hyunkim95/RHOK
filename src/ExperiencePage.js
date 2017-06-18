@@ -62,7 +62,7 @@ class ExperiencePage extends Component {
           />
 
 
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed transparent">
+        <Modal id="content" isOpen={this.state.modal} toggle={this.toggle} className="modalRelaxed transparent">
             <ModalBody>
               <Card
                 onClick={this.props.onclick}
