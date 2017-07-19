@@ -19,7 +19,7 @@ Initially we only had designs, but after 48 hours we had managed to create an ap
 <img src="http://i.imgur.com/tl53rYW.png" >
 
 ## User Flow 
-<img src="http://i.imgur.com/undefined.png">
+<img src="http://i.imgur.com/tl53rYW.png">
 
 ## Final Product
 <img src="http://i.imgur.com/4OICn6o.jpg" > 
