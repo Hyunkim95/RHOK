@@ -16,7 +16,7 @@ Initially we only had designs, but after 48 hours we had managed to create an ap
 
 ## Design Process 
 
-<img src="http://i.imgur.com/tl53rYW.png" >
+<img src="http://i.imgur.com/dtTuO0w.png" >
 
 ## User Flow 
 <img src="http://i.imgur.com/tl53rYW.png">
