@@ -16,13 +16,11 @@ Initially we only had designs, but after 48 hours we had managed to create an ap
 
 ## Design Process 
 
-<img src="https://files.slack.com/files-tmb/T5JMM0BGX-F61V346UQ-bcf68df0a6/image_uploaded_from_ios_1024.jpg" >
+<img src="http://i.imgur.com/tl53rYW.png" >
 
-## UI Design 
+## User Flow 
+<img src="http://i.imgur.com/undefined.png">
 
-# User Flow 
-<img src="https://files.slack.com/files-tmb/T5JMM0BGX-F5VB3REG3-932788a5f5/flow-chart-with-highlights_1024.png">
-
-# Final Product
-<img src="https://files.slack.com/files-pri/T5JMM0BGX-F5W8HJBHD/iamee_iphone6_mock_1024x768_v1.jpg" > 
+## Final Product
+<img src="http://i.imgur.com/4OICn6o.jpg" > 
 
